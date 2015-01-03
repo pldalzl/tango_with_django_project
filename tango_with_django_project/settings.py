@@ -97,3 +97,6 @@ TEMPLATE_DIRS = [
     '/home/paul/workspace/tango_with_django_project/templates/rango/',
     TEMPLATE_PATH,
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Absolute path to the media directory
