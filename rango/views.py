@@ -24,7 +24,7 @@ def index(request):
 
 
 def about(request):
-    context_dict = {'boldmessage': "This is the about page"}
+    context_dict = {'boldmessage': " What is the about page about?"}
     return render(request, 'rango/about.html', context_dict)
 
 
@@ -128,7 +128,7 @@ def register(request):
         if user_form.is_valid() and profile_form.is_valid():
             # save the user's form data to the database
             user = user_form.save()
-             # Now we hash the password with the set_password method.
+            # Now we hash the password with the set_password method.
             # Once hashed, we can update the user object.
             user.set_password(user.password)
             user.save()
@@ -215,7 +215,7 @@ def some_view(request):
 
 @login_required
 def restricted(request):
-    return HttpResponse("Since you're logged in, you can see this text")
+    return render(request, 'rango/restricted.html', {})
 
 
 @login_required()
