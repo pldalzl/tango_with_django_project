@@ -6,10 +6,10 @@
 
 {% block body_block %}
         <h1>Register with Rango</h1>
-         <a href="{% url 'rango' %}">Index</a><br />
+         <a href="{% url 'index' %}">Index</a><br />
         {% if registered %}
         Rango says: <strong>thank you for registering!</strong>
-        <a href="{% url 'rango' %}">Return to the homepage.</a><br />
+        <a href="{% url 'index' %}">Return to the homepage.</a><br />
         {% else %}
         Rango says: <strong>register here!</strong><br />
 

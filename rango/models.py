@@ -16,6 +16,7 @@ class Category(models.Model):
         def __unicode__(self):
                 return self.name
 
+
 class Page(models.Model):
     category = models.ForeignKey(Category)
     title = models.CharField(max_length=128)
@@ -24,6 +25,7 @@ class Page(models.Model):
 
     def __unicode__(self):
         return self.title
+
 
 class UserProfile(models.Model):
     # This line is required. Links UserProfile to a User model instance.
